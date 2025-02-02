@@ -1,16 +1,16 @@
-
 {
     "version": 2,
     "builds": [
       {
-        "src": "manage.py",
-        "use": "@vercel/python"
+        "src": "auth_project/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.0" }
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "manage.py"
+        "dest": "auth_project/wsgi.py"
       }
     ]
   }
