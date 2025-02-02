@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'auth_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'login and resgister',
+        'USER': 'postgres',
+        'PASSWORD': 'login@222',
+        'HOST': 'db.youfxqzpygrxiaoraumi.supabase.co',
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 
